@@ -11,7 +11,9 @@ public class Utils {
         Properties props = new Properties();
         FileInputStream fis = new FileInputStream("src/main/resources/server.properties");
         props.load(fis);
+
         String prop = (props.getProperty(propName));
+        fis.close();
         return prop;
 
     }
